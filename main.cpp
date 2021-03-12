@@ -6,6 +6,7 @@ using namespace std;
 
 class zadanie2{
 	ifstream we;
+	ofstream wy;
 	vector <string> obraz;
 	
 	public:
@@ -18,6 +19,7 @@ class zadanie2{
 
 zadanie2::zadanie2() {
 	we.open("dane_ulamki.txt");
+	wy.open("wyniki_ulamki.txt");
 }
 
 void zadanie2::wczytaj() {
@@ -35,7 +37,8 @@ void zadanie2::wczytaj() {
 				ilosc_nieskracalne++;
 			}
 		}
-		cout<<"Zadanie 65.2: "<<ilosc_nieskracalne<<"\n";
+		cout<<"Zadanie 65.2: "<<ilosc_nieskracalne;
+		wy<<"Zadanie 65.2: "<<ilosc_nieskracalne;
 	}
 }
 	
@@ -63,6 +66,7 @@ bool zadanie2::nieskracalne(vector <int> czynniki1, vector <int> czynniki2) {
 
 zadanie2::~zadanie2() {
 	we.close();
+	wy.close();
 }
 
 int main(int argc, char** argv) {
