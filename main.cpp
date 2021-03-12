@@ -6,7 +6,6 @@ using namespace std;
 
 class zadanie2{
 	ifstream we;
-	ofstream wy;
 	vector <string> obraz;
 	
 	public:
@@ -64,7 +63,6 @@ bool zadanie2::nieskracalne(vector <int> czynniki1, vector <int> czynniki2) {
 
 zadanie2::~zadanie2() {
 	we.close();
-	wy.close();
 }
 
 int main(int argc, char** argv) {
